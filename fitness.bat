@@ -5,9 +5,9 @@ set pos_zipfile[0]=pos1.log.zip
 set pos_zipfile[1]=pos2.log.zip
 set pos_zipfile[2]=pos3.log.zip
 set /a maxsizegiga=1
-set /a maxsizebyte=%maxsizegiga%*1024
+set /a maxsizebyte=%maxsizegiga%*1024*1024
 set /a max7zipmega=10
-set /a max7zipbyte=%max7zipmega%*1024*1024
+set /a max7zipbyte=%max7zipmega%*1024*1024*1024
 set ziplogfile=7zip\zip.pos.log
 set ziplogfilebk=7zip\zip.pos.log.bk
 
