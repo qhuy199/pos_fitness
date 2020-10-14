@@ -34,7 +34,7 @@ REM DO ERRORLEVEL TRA LAI GIA TRI CHO "CALLER" NEN PHAI GOI FUNCTION TRONG NAY L
 	echo %date% %time% 7-zip - Compressing ....
 	echo %date% %time% 7-zip - Compressing ...."%pos_logfile%" >> "%ziplogfile%" 2>&1
 	
-	.\7zip\7z.exe a -y -tzip tmp_pos_log.zip %pos_logfile% >> "%ziplogfile%" 2>&1
+	.\7zip\7z.exe a -y -tzip -tmp_pos_log.zip %pos_logfile% >> "%ziplogfile%" 2>&1
 	if %ERRORLEVEL%==0 call :del_old_data %pos_zipfile[0]% %pos_zipfile[1]% %pos_zipfile[2]% 		
 	if %ERRORLEVEL%==0 call :rename_archive_as_zip
 
