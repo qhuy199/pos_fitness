@@ -4,7 +4,7 @@ Phiên bản rút gọn, bỏ qua các báo lỗi hệ thống, cứ 50M thì b�
 Locate: 
 c:\app\pos\gym.bat
 
-Required:
+Required
 FILE c:\app\pos\pos.log
 FOLDER c:\app\pos\7zip
 
