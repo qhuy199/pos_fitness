@@ -4,10 +4,13 @@ set pos_logfile=pos.log
 set pos_zipfile[0]=pos1.log.zip
 set pos_zipfile[1]=pos2.log.zip
 set pos_zipfile[2]=pos3.log.zip
+set pos_zipfile[3]=pos4.log.zip
+set pos_zipfile[4]=pos5.log.zip
 set /a maxsizemega=50
 set /a maxsizebyte=%maxsizemega%*1024*1024
 
-if EXIST %pos_logfile% (goto :start) else echo KHONG CO FILE LOG, BAO ADMIN XU LY 	
+if EXIST %pos_logfile% (goto :start) else echo KHONG CO FILE LOG, BAO ADMIN XU LY 
+pause
 goto :eof
 
 :start
@@ -18,7 +21,9 @@ goto :eof
 EXIT /B %ERRORLEVEL%
 
 :archive_newdata	
-	del %pos_zipfile[2]%
+	del %pos_zipfile[4]%
+	ren %pos_zipfile[3]% %pos_zipfile[4]%
+	ren %pos_zipfile[2]% %pos_zipfile[3]%
 	ren %pos_zipfile[1]% %pos_zipfile[2]%
 	ren %pos_zipfile[0]% %pos_zipfile[1]%
 	.\7zip\7z.exe a -y -tzip -sdel %pos_zipfile[0]% %pos_logfile%
