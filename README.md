@@ -14,3 +14,6 @@ Operation:
   - Nén bằng 7zip file pos.log thành tmp_poslog.zip
   - Xoá pos3.zip (nếu có), rename pos2.zip -> pos3.zip, rename pos1.zip -> pos2.zip
   - Rename tmp_poslog.zip thành pos1.zip
+
+# pos_gym
+Phiên bản rút gọn, bỏ qua các báo lỗi hệ thống, cứ 50M thì bắt đầu nén, chia làm 5 file zip
