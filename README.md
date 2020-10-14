@@ -5,8 +5,8 @@ Locate:
 c:\app\pos\fitness.bat
 
 Required:
-c:\app\pos\pos.log
-c:\app\pos\7zip
+- File: c:\app\pos\pos.log
+- c:\app\pos\7zip
 
 Concept: 
 - Lưu trư file log và tự động rorate trong 3 file zip
