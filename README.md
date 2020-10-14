@@ -2,11 +2,11 @@
 Phiên bản rút gọn, bỏ qua các báo lỗi hệ thống, cứ 50M thì bắt đầu nén, chia làm 5 file zip
 
 Locate: 
-c:\app\pos\gym.bat
+- c:\app\pos\gym.bat
 
-Required
-FILE c:\app\pos\pos.log
-FOLDER c:\app\pos\7zip
+Required:
+- FILE c:\app\pos\pos.log
+- FOLDER c:\app\pos\7zip
 
 Concept: 
 - Lưu trư file log và tự động rorate trong 5 file zip
