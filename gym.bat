@@ -73,7 +73,7 @@ set pos_zipfile[4]=pos5.log.zip
 set /a maxsizemega=50
 set /a maxsizebyte=%maxsizemega%*1024*1024
 
-if EXIST %pos_logfile% (goto :log_rotate) else echo KHONG CO FILE LOG, NEU LA LAN DAU CO THONG BAO NAY LA BINH THUONG
+if EXIST %pos_logfile% (call :log_rotate) else echo KHONG CO FILE LOG, NEU LA LAN DAU CO THONG BAO NAY LA BINH THUONG
 goto :start
 
 :log_rotate
@@ -104,3 +104,5 @@ type "auto-update-check"
 IF %ERRORLEVEL% EQU 0 (echo: && echo ============================ && echo: && echo Dang cap nhat phien ban moi ... && java -jar "%DIRNAME%POSAutoUpdater.jar")
 del "auto-update-check" /f /q
 Đang hiển thị 8113810993768084872.
+
+Đang hiển thị 1137125524001238569.
