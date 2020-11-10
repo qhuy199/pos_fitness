@@ -9,7 +9,7 @@ set pos_zipfile[4]=pos5.log.zip
 set /a maxsizemega=50
 set /a maxsizebyte=%maxsizemega%*1024*1024
 
-if EXIST %pos_logfile% (goto :start) else echo KHONG CO FILE LOG, BAO ADMIN XU LY 
+if EXIST %pos_logfile% (call :start) else echo KHONG CO FILE LOG, BAO ADMIN XU LY 
 pause
 goto :eof
 
