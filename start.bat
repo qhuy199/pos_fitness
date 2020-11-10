@@ -103,6 +103,4 @@ ping -n 10 127.0.0.1 >nul
 type "auto-update-check"
 IF %ERRORLEVEL% EQU 0 (echo: && echo ============================ && echo: && echo Dang cap nhat phien ban moi ... && java -jar "%DIRNAME%POSAutoUpdater.jar")
 del "auto-update-check" /f /q
-Đang hiển thị 8113810993768084872.
 
-Đang hiển thị 1137125524001238569.
