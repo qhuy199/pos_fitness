@@ -98,7 +98,19 @@ EXIT /B %ERRORLEVEL%
 
 :start
 REM /////////////////
+:CheckOS
+IF "%PROCESSOR_ARCHITECTURE%"=="x86" (GOTO 32BIT) ELSE (GOTO 64BIT)
+
+:64BIT
 start /B javaw -Xms512m -Xmx1024m -cp %CP% -Djava.library.path="%DIRNAME%lib/Windows/i368-mingw32" -Ddirname.path="%DIRNAME%./" -splash:unicenta_splash_dark.png com.openbravo.pos.forms.StartPOS %1 1>> pos.log 2>&1
+GOTO checking
+
+:32BIT
+start /B javaw -Xms512m -Xmx1024m -cp %CP% -Djava.library.path="%DIRNAME%lib/Windows/i368-mingw32" -Ddirname.path="%DIRNAME%./" -splash:unicenta_splash_dark.png com.openbravo.pos.forms.StartPOS %1 1>> pos.log 2>&1
+GOTO checking
+
+:checking
+
 ping -n 10 127.0.0.1 >nul
 type "auto-update-check"
 IF %ERRORLEVEL% EQU 0 (echo: && echo ============================ && echo: && echo Dang cap nhat phien ban moi ... && java -jar "%DIRNAME%POSAutoUpdater.jar")
